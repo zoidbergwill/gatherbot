@@ -3416,6 +3416,15 @@ sub chanpart {
     # If the player is signed, remove him
     # $self->outplayer($who);
 
+    if (($gamenum > 0) or ($canpick))
+    {
+        return;
+    }
+    else
+    {
+        $self->outplayer($who);
+    }
+
     return;
 }
 
@@ -3428,6 +3437,15 @@ sub userquit {
 
     # If the player is signed, remove him
     # $self->outplayer($who);
+
+    if (($gamenum > 0) or ($canpick))
+    {
+        return;
+    }w
+    else
+    {
+        $self->outplayer($who);
+    }
 
     return;
 }
