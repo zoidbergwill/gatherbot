@@ -347,7 +347,7 @@ sub said {
 
         if ($#commands == 0) {
 
-            # Check that the user has over $initialpoints poins
+            # Check that the user has over $initialpoints points
             @userdata = split '\.', $users{$who};
             my $points = $userdata[1];
 

@@ -15,7 +15,8 @@ perl modules: Bot::BasicBot, DateTime (at least, to be complemented later)
 <p>If you're interested to run this bot on your channel and want advice/help, drop me a message (contact info is at the top).</p>
 
 <font face="Candara"><h3>Currently implemented features</h3></font>
-<p>!add            = Signs you up for the game.<br>
+<p>
+!add            = Signs you up for the game.<br>
 !list           = Shows you list of signed up players.<br>
 !out            = Signs you out from the game. In addition, you can request an another player to be removed.<br>
 !votemap        = Syntax is !votemap &lt;mapname&gt;. More info with !votemap<br>
@@ -45,12 +46,12 @@ perl modules: Bot::BasicBot, DateTime (at least, to be complemented later)
 !out             = Signs a player out from the game. Syntax is !out &lt;playername&gt;<br>
 !abort           = Aborts the sign-up and clears the player list.<br>
 !captain         = You can make someone a captain with this command, supposing that there's a free captain slot and that the player is signed up.<br>
-!uncaptain       = Frees a captain slot from someone. Syntax is !uncaptain <captains_name&gt;. After the picking has started, use !changecaptain or !rafflecaptain.<br>
+!uncaptain       = Frees a captain slot from someone. Syntax is !uncaptain &lt;captains_name&gt;. After the picking has started, use !changecaptain or !rafflecaptain. <br>
 !rafflecaptain   = You can request the raffling of a new captain to replace a current captain, supposing that picking has started. Syntax is !rafflecaptain &lt;captains_name&gt;.<br>
 !replace         = Replaces a player in the signup or in a game that already started. More info on !replace<br>
 !aoe             = Sends a private irc-notice to everyone on the channel about the status of the signup.<br>
 !hilight         = Highlights everyone on the channel at once.<br>
-!report          = Sets the score of a game. Syntax is !report &lt;gameno&gt; <Team 1|Team 2|Draw<br>
+!report          = Sets the score of a game. Syntax is !report &lt;gameno&gt; &lt;Team 1|Team 2|Draw&gt;<br>
 !voidgame        = Voids a game as if it was never played. Syntax is !voidgame &lt;gameno&gt;<br>
 !accesslevel     = Sets the given user's accesslevel to the given level. Syntax is !accesslevel &lt;username&gt; &lt;admin|user&gt;<br>
 !changename      = Changes the given user's username. Syntax is !changename &lt;current_name&gt; &lt;new_name&gt;<br>
