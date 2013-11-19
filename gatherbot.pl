@@ -254,19 +254,23 @@ sub said {
         if ($remindtovote == 1 && $playercount < $maxplayers) {
             if ($mutualvotemap == 0 || $mutualvotecaptain == 0) {
                 my $votables;
+                my $voteablecommands;
 
                 if ($mutualvotemap == 0 && $mutualvotecaptain == 0) {
                     $votables = __x ("a map and a captain");
+                    $voteablecommands = __x ("!votemap <mapname> and !votecaptain <name>");
                 } else {
                     if ($mutualvotemap == 0) {
                         $votables = __x ("a map");
+                        $voteablecommands = __x ("!votemap <mapname>");
                     } else {
                         $votables = __x ("a captain");
+                        $voteablecommands = __x ("!votecaptain <name>");
                     }
                 }
 
-                $self->sayc(__x("{tbadded}: Note! You can already vote for {votables}.",
-                                tbadded => $tbadded, votables => $votables));
+                $self->sayc(__x("{tbadded}: Note! You can already vote for {votables}. Using the command {voteablecommands}.",
+                                tbadded => $tbadded, votables => $votables, voteablecommands => $voteablecommands));
             }
         }
 
@@ -1686,7 +1690,9 @@ sub said {
                 $outline = __x("Mapvotes: ");
 
                 for my $map (@maps) {
-                    $outline .= "$map\[$mapvotes{$map}\], ";
+                    if ($mapvotes{$map} > 0){
+                        $outline .= "$map\[$mapvotes{$map}\], ";
+                    }
                 }
                 chop $outline; chop $outline;
             }
